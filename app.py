@@ -10,8 +10,7 @@ def home():
 
 @app.route('/categories/')
 def categories():
-    categories_list = {"Одежда": "clothes.html", "Обувь": "shoes.html", "Спортивное": "sports.html",
-                       "Аксессуары": "accessories.html"}
+    categories_list = {"Одежда": "clothes.html", "Обувь": "shoes.html", "Спортивное": "sports.html"}
     return render_template('categories.html', categories_list=categories_list)
 
 
@@ -44,15 +43,6 @@ def sports():
     ]
     return render_template('sports.html', list=sports_list)
 
-
-@app.route('/accessories/')
-def accessories():
-    accessories_list = [
-        {'name': 'Серьги', 'price': 166.20},
-        {'name': 'Кольцо', 'price': 122.54},
-        {'name': 'Подвеска', 'price': 558.42}
-    ]
-    return render_template('accessories.html', list=accessories_list)
 
 
 @app.route('/about/')
